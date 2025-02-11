@@ -1,0 +1,471 @@
+/*!
+ * Панель (Desk).
+ * 
+ * Модуль "Медиафайлы".
+ * 
+ * Copyright 2015 Вeб-студия GearMagic
+ * Copyright Anton Tivonenko <anton.tivonenko@gmail.com>
+ * https://gearmagic.ru/license/
+ */
+
+/**
+ * Вкладка панели.
+ */
+#gm-mediafiles-tab-body { background-color: #e7e7e7; }
+
+
+/* Заливка заднего фона сетки (см. идент. viewManager) */
+#gm-mediafiles-grid-view .x-grid-view {
+    background: url("../images/watermark.svg") no-repeat calc(100% - 25px) calc(100% - 20px);
+    background-size: 100px;
+}
+
+
+/**
+ * Дерево папок.
+ */
+#gm-mediafiles-tree {
+    -webkit-box-shadow: 4px 1px 6px -5px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 4px 1px 6px -5px rgba(0, 0, 0, 0.31);
+    box-shadow: 4px 1px 6px -5px rgba(0, 0, 0, 0.31);
+}
+.gm-mediafiles-tree { background-color: #fafafa; }
+.gm-mediafiles-tree .x-grid-body,
+.gm-mediafiles-tree .x-grid-item { background-color: inherit; }
+.gm-mediafiles-tree .x-grid-item-over { background-color: #e4eeeb; }
+.gm-mediafiles-tree .x-grid-item-selected { background-color: #c5dace; }
+.gm-mediafiles-tree .x-grid-item-focused .x-grid-cell-inner:before { display: none; }
+
+
+/**
+ * Панель инструментов.
+ */
+ .gm-mediafiles-toolbar { background-color: #f5f5f5; }
+ .gm-mediafiles-toolbar .x-mask { opacity: 0; }
+ .gm-mediafiles-toolbar .x-toolbar-separator-horizontal { border-width: 0; }
+ /* Кнопки панели инструментов */
+ .gm-mediafiles-toolbar__btn {
+     width: 38px;
+     height: 38px;
+     background-color: #ededed;
+     background-image: none;
+     border-radius: 4px;
+ }
+ .gm-mediafiles-toolbar__btn.x-btn-over {
+     border-color: #68a081;
+     background: #cbe6d7;
+ }
+ .gm-mediafiles-toolbar__btn.x-btn-pressed { background: #b1cebe !important; }
+ .gm-mediafiles-toolbar__btn.x-btn-disabled { opacity: 0.3; }
+
+
+/**
+ * Предварительный просмотр в подсказке.
+ */
+ .gm-mediafiles__celltip-icon,
+ .gm-mediafiles__celltip-preview {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 180px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+    margin-top: 10px;
+ }
+ .gm-mediafiles__celltip-icon {
+     height: 100px;
+ }
+
+
+/**
+ * Виджет панели отображения файлов / папок в виде списка.
+ */
+/**
+ * Элемента списка.
+ * Gm.be.mediafiles.ListView.itemSelector = "..." 
+ */
+ .gm-mediafiles-listview__item {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 3px;
+    padding: 1px;
+    width: 150px;
+    height: 150px;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    font: normal 14px/16px "Roboto Condensed", helvetica, arial, verdana, sans-serif;
+    color: #878787;
+    overflow: hidden;
+}
+.gm-mediafiles-listview__item.x-view-item-focused {
+    outline-style: solid !important;
+}
+/**
+ * Над элементом.
+ * Gm.be.mediafiles.ListView.overItemCls = "..." 
+ */
+.gm-mediafiles-listview__item_over {
+    background-color: #ededed;
+}
+/**
+ * Выделенный элемент.
+ * Gm.be.mediafiles.ListView.selectedItemCls = "..." 
+ */
+ .gm-mediafiles-listview__item_selected {
+    background: #eff5fb;
+    border:1px solid silver;
+    padding: 4px;
+}
+.gm-mediafiles-listview__item_selected .gm-mediafiles-listview__thumb {
+    background: transparent;
+}
+/* Обёртка элемента */
+.gm-mediafiles-listview__wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px 40px 30px;
+}
+/* Значок элемента */
+.gm-mediafiles-listview__icon {
+    position: relative;
+}
+.gm-mediafiles-listview__icon img {
+    width: auto;
+    height : auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+/* Вывод изображения элемента */
+.gm-mediafiles-listview__preview {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px 1px 40px 1px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.gm-mediafiles-listview__preview img {
+    width: auto;
+    height : auto;
+    max-height: 100%;
+}
+/* Перекрытие значка элемента */
+.gm-mediafiles-listview__overlay {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 100%;
+    height: 45%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.gm-mediafiles-listview__title {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font: normal 15px/16px helvetica, arial, verdana, sans-serif;
+    padding: 0 5px 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+}
+
+
+/**
+ * Предварительный просмотр в подсказке.
+ */
+ .gm-mediafiles-form__preview {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+ }
+
+
+/**
+ * Отображение ошибки в одном из полей формы.
+ */
+.gm-mediafiles-error .x-form-display-field {
+    color: #ff5a4c;
+}
+
+
+/**
+ * Панель инструментов просмотра файлов.
+ */
+ /* Значок "Корневая папка" */
+ .gm-mediafiles__icon-home { 
+    background-image: url("../images/toolbar/icon-home.svg"); 
+    background-size: contain;
+}
+/*.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent*/
+
+/* Значок "Парейти на уровень выше" */
+.gm-mediafiles__icon-up { 
+    background-image: url("../images/toolbar/icon-up.svg"); 
+    background-size: contain;
+}
+/* Значок "Создать папку" */
+.gm-mediafiles__icon-create_folder { 
+    background-image: url("../images/toolbar/icon-create_folder.svg"); 
+    background-size: contain;
+}
+/* Значок "Создать файл" */
+.gm-mediafiles__icon-create_file { 
+    background-image: url("../images/toolbar/icon-create_file.svg"); 
+    background-size: contain;
+}
+/* Значок "Удалить выбранные папки / файлы" */
+.gm-mediafiles__icon-delete { 
+    background-image: url("../images/toolbar/icon-delete.svg"); 
+    background-size: contain;
+}
+/* Значок "Обновить" */
+.gm-mediafiles__icon-refresh { 
+    background-image: url("../images/toolbar/icon-refresh.svg"); 
+    background-size: contain;
+}
+/* Значок "Поиск папки / файла" */
+.gm-mediafiles__icon-find { 
+    background-image: url("../images/toolbar/icon-find.svg"); 
+    background-size: contain;
+}
+/* Значок "Профилирование папки / файла" */
+.gm-mediafiles__icon-profile_on { 
+    background-image: url("../images/toolbar/icon-profile_on.svg"); 
+    background-size: contain;
+}
+.gm-mediafiles__icon-profile_off { 
+    background-image: url("../images/toolbar/icon-profile_off.svg"); 
+    background-size: contain;
+}
+/* Значок "Выделить все" */
+.gm-mediafiles__icon-select { 
+    background-image: url("../images/toolbar/icon-select.svg"); 
+    background-size: contain;
+}
+/* Значок "Инвертировать выделение" */
+.gm-mediafiles__icon-inselect { 
+    background-image: url("../images/toolbar/icon-inselect.svg"); 
+    background-size: contain;
+}
+/* Значок "Убрать выделение" */
+.gm-mediafiles__icon-unselect { 
+    background-image: url("../images/toolbar/icon-unselect.svg"); 
+    background-size: contain;
+}
+/* Значок "Загрузить" */
+.gm-mediafiles__icon-upload { 
+    background-image: url("../images/toolbar/icon-upload.svg"); 
+    background-size: contain;
+}
+/* Значок "Скачать" */
+.gm-mediafiles__icon-download { 
+    background-image: url("../images/toolbar/icon-download.svg"); 
+    background-size: contain;
+}
+/* Значок "Архивировать" */
+.gm-mediafiles__icon-compress { 
+    background-image: url("../images/toolbar/icon-compress.svg"); 
+    background-size: contain;
+}
+/* Значок "Разархивировать" */
+.gm-mediafiles__icon-extract { 
+    background-image: url("../images/toolbar/icon-extract.svg"); 
+    background-size: contain;
+}
+/* Значок "Переименовать" */
+.gm-mediafiles__icon-rename { 
+    background-image: url("../images/toolbar/icon-rename.svg"); 
+    background-size: contain;
+}
+/* Значок "Редактировать файл" */
+.gm-mediafiles__icon-edit { 
+    background-image: url("../images/toolbar/icon-edit.svg"); 
+    background-size: contain;
+}
+/* Значок "Просмотреть файл" */
+.gm-mediafiles__icon-view { 
+    background-image: url("../images/toolbar/icon-view.svg"); 
+    background-size: contain;
+}
+/* Значок "Права доступа" */
+.gm-mediafiles__icon-permissions { 
+    background-image: url("../images/toolbar/icon-permissions.svg"); 
+    background-size: contain;
+}
+/* Значок "Копировать выбранные папки / файлы" */
+.gm-mediafiles__icon-copy { 
+    background-image: url("../images/toolbar/icon-copy.svg"); 
+    background-size: contain;
+}
+/* Значок "Вырезать" */
+.gm-mediafiles__icon-cut { 
+    background-image: url("../images/toolbar/icon-cut.svg"); 
+    background-size: contain;
+}
+/* Значок "Вставить" */
+.gm-mediafiles__icon-paste { 
+    background-image: url("../images/toolbar/icon-paste.svg"); 
+    background-size: contain;
+}
+/* Значок "Информация о выбранной папке / файле" */
+.gm-mediafiles__icon-attributes { 
+    background-image: url("../images/toolbar/icon-attributes.svg"); 
+    background-size: contain;
+}
+/* Значок "Сетка" */
+.gm-mediafiles__icon-grid { 
+    background-image: url("../images/toolbar/icon-grid.svg"); 
+    background-size: contain;
+}
+/* Значок "Список" */
+.gm-mediafiles__icon-list { 
+    background-image: url("../images/toolbar/icon-list.svg"); 
+    background-size: contain;
+}
+/* Значок "Справка" */
+.gm-mediafiles__icon-info { 
+    background-image: url("../images/toolbar/icon-info.svg"); 
+    background-size: contain;
+}
+/* Значок "Настройки" */
+.gm-mediafiles__icon-settings { 
+    background-image: url("../images/toolbar/icon-settings.svg"); 
+    background-size: contain;
+}
+
+
+/**
+ * Панель инструментов дерева папок.
+ */
+ /* Значок "Развернуть все папки" */
+.gm-mediafiles__icon-expand { 
+    background-image: url("../images/toolbar/icon-expand.svg"); 
+    background-size: contain;
+}
+/* Значок "Свернуть все папки" */
+.gm-mediafiles__icon-collapse { 
+    background-image: url("../images/toolbar/icon-collapse.svg"); 
+    background-size: contain;
+}
+
+
+/**
+ * Вид папок.
+ */
+ /* Без значка */
+ .g-tree .x-tree-icon-parent.empty { 
+    background: #fff; 
+    width: 1px;
+    height: 16px;
+}
+/* Значок "Корневая папка" */
+.g-tree .x-tree-icon-parent.gm-mediafiles__icon-folder_media { 
+    background-image: url("../images/folders/icon-folder_media.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-mediafiles__icon-folder_media { 
+    background-image: url("../images/folders/icon-folder_media-opened.svg"); 
+    background-size: contain;
+}
+/* Значок "Корневая папка" */
+.g-tree .x-tree-icon-parent.gm-mediafiles__icon-folder_public { 
+    background-image: url("../images/folders/icon-folder_public.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-mediafiles__icon-folder_public { 
+    background-image: url("../images/folders/icon-folder_public-opened.svg"); 
+    background-size: contain;
+}
+.g-tree .x-tree-icon-parent.gm-mediafiles__icon-folder_vendor { 
+    background-image: url("../images/folders/icon-folder_vendor.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-mediafiles__icon-folder_vendor { 
+    background-image: url("../images/folders/icon-folder_vendor-opened.svg"); 
+    background-size: contain;
+}
+.g-tree .x-tree-icon-parent.gm-mediafiles__icon-folder_config { 
+    background-image: url("../images/folders/icon-folder_config.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-mediafiles__icon-folder_config { 
+    background-image: url("../images/folders/icon-folder_config-opened.svg"); 
+    background-size: contain;
+}
+.g-tree .x-tree-icon-parent.gm-mediafiles__icon-folder_runtime { 
+    background-image: url("../images/folders/icon-folder_runtime.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-mediafiles__icon-folder_runtime { 
+    background-image: url("../images/folders/icon-folder_runtime-opened.svg"); 
+    background-size: contain;
+}
+
+
+/**
+ * Вид файлов: сетка.
+ */
+/* Заливка заднего фона сетки (см. идент. viewManager) */
+#gm-mediafiles-grid .x-grid-view {
+    background: url("../images/toolbar/watermark.svg") no-repeat calc(100% - 25px) calc(100% - 20px);
+    background-size: 100px;
+}
+
+/**
+ * Строка выбора файла / папки.
+ * Ext.window.Window.bodyCls = "gm-mediafiles-dialog"
+ */
+.gm-mediafiles-dialog.x-border-layout-ct { background-color: #f5f5f5; }
+
+
+/**
+ * Строка выбора файла / папки.
+ */
+.gm-mediafiles-footer { background-color: #f5f5f5; }
+
+
+/**
+ * Навигационная цепочка.
+ */
+.gm-mediafiles-breadcrumbs {
+    font-size: 12px;
+    color: #6667;
+    padding: 5px 0 5px 0;
+}
+.gm-mediafiles-breadcrumbs span {
+    padding: 5px 6px 5px 6px;
+    background: #ededed;
+    margin: 2px;
+    color: #656565;
+    border-radius: 4px;
+}
+.gm-mediafiles-breadcrumbs span:first-child {
+    margin-left: 0;
+}
+.gm-mediafiles-breadcrumbs .item:hover {
+    cursor: default;
+    background: #cbe6d7;
+}
+.gm-mediafiles-breadcrumbs .divider {
+    background: url("../images/separator.svg") no-repeat center center;
+    margin: 0;
+}
+.gm-mediafiles-breadcrumbs .item_active:hover,
+.gm-mediafiles-breadcrumbs .item_active {
+    background: #e1e1e1;
+}
