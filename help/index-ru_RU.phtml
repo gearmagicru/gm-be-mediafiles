@@ -1,0 +1,26 @@
+<?php
+/**
+ * Страница "Содержание".
+ * 
+ * Русская локализации.
+ * 
+ * Этот файл является частью расширения модуля веб-приложения GearMagic.
+ * 
+ * @copyright Copyright (c) 2015 Веб-студия GearMagic
+ * @license https://gearmagic.ru/license/
+ */
+?>
+<article>
+    <h1>Медиафайлы</h1>
+    <div class="g-help-icon">
+        <img src="<?= $assetsUrl, '/images/icon.svg' ?>" />
+    </div>
+    <p>Изображения, видео и файлы, которые вы загружаете и используете на страницах сайта.</p>
+
+    <h2>Содержание:</h2>
+    <ul class="g-help-list">
+        <li><a href="<?= $url('filepanel') ?>">Панель файлов</a></li>
+        <li><a href="<?= $url('folderpanel') ?>">Панель дерева папок</a></li>
+        <li><a href="<?= $url('settings') ?>">Настройка</a></li>
+    </ul>
+</article>
