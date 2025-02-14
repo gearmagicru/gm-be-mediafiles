@@ -1,13 +1,7 @@
 {
     "name": "gearmagicru/gm-be-mediafiles",
-    "description": "Control panel module \"Media files\"",
-    "keywords": [
-        "gm",
-        "gearmagic",
-        "GM Panel",
-        "module",
-        "mediafiles"
-    ],
+    "description": "Control Panel module \"Media files\"",
+    "keywords": ["gearmagic", "gm-panel", "gm-component", "gm-module", "module", "media"],
     "homepage": "https://apps.gearmagic.ru/component/gm-be-mediafiles",
     "type": "component",
     "license": "MIT",
