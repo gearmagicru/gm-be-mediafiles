@@ -15,70 +15,72 @@
     <div class="g-help-screen g-help-screen--hidable">
         <img src="<?= $assetsUrl, '/help/filepanel.png' ?>" />
     </div>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+    <p>The file panel consists of a list of files and a toolbar for performing operations on these files.</p>
     <h2>List columns</h2>
     <ul class="g-help-list">
-        <li><b>Name.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Full name.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Size.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Type.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-        voluptua;</li>
-        <li><b>MIME-type.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Permissions.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Last accessed.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Last modified.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><b>Name.</b> File or folder name;</li>
+        <li><b>Full name.</b> The full name of a file or folder includes the local path relative to the current folder;</li>
+        <li><b>Size.</b> File size in gigabytes, megabytes, kilobytes and bytes;</li>
+        <li><b>Type.</b> Item type: file folder or file;</li>
+        <li><b>MIME-type.</b> A MIME type is a standard for specifying the format of data sent and received in email, web browsers, and other Internet applications. Each MIME type consists of two parts: a main type and a subtype.;</li>
+        <li><b>Permissions.</b> Access rights entry letter and number;</li>
+        <li><b>Last accessed.</b> Date and time of last access to a file or folder;</li>
+        <li><b>Last modified.</b> The date and time the file or folder was last modified.</li>
     </ul>
 
     <h2>Toolbar</h2>
     <ul class="g-help-list">
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-home.svg' ?>" width="32px" height="32px"/> <b>Root folder.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-home.svg' ?>" width="16px" height="16px"/> <b>Root folder.</b> Goes to the root folder;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-up.svg' ?>" width="32px" height="32px"/> <b>Go up.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-up.svg' ?>" width="16px" height="16px"/> <b>Go up.</b> Goes to the parent folder (folder one level up);
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-delete.svg' ?>" width="32px" height="32px"/> <b>Delete.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-delete.svg' ?>" width="16px" height="16px"/> <b>Delete.</b> Deletes selected items (files, folders) with confirmation;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-refresh.svg' ?>" width="32px" height="32px"/> <b>Refresh.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-refresh.svg' ?>" width="16px" height="16px"/> <b>Refresh.</b> Updates the list of items (files, folders);
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-find.svg' ?>" width="32px" height="32px"/> <b>Search.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-find.svg' ?>" width="16px" height="16px"/> <b>Search.</b> Shows a panel with the ability to search for files and folders;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-profile_on.svg' ?>" width="32px" height="32px"/> <b>Profiling.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-profile_on.svg' ?>" width="16px" height="16px"/> <b>Profiling.</b> Expands or collapses the Navigation Pane to display information about the selected file or folder;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-select.svg' ?>" width="32px" height="32px"/> <b>Select.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-select.svg' ?>" width="16px" height="16px"/> <b>Select.</b> Selects or deselects all items (files, folders) in the list;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-upload.svg' ?>" width="32px" height="32px"/> <b>Upload.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-upload.svg' ?>" width="16px" height="16px"/> <b>Upload.</b> Opens a window to download a file;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-download.svg' ?>" width="32px" height="32px"/> <b>Download.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-download.svg' ?>" width="16px" height="16px"/> <b>Download.</b> Performs download of selected elements (files, folders). If there are several elements, they will be packed into an archive and downloaded;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-compress.svg' ?>" width="32px" height="32px"/> <b>Compress.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-compress.svg' ?>" width="16px" height="16px"/> <b>Compress.</b> Performs archiving and downloading of selected items (files, folders);
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-extract.svg' ?>" width="32px" height="32px"/> <b>Extract.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-extract.svg' ?>" width="16px" height="16px"/> <b>Extract.</b> Opens a window to perform unzipping of the selected file;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-rename.svg' ?>" width="32px" height="32px"/> <b>Rename.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-rename.svg' ?>" width="16px" height="16px"/> <b>Rename.</b> Opens a window for renaming a file or folder;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-view.svg' ?>" width="32px" height="32px"/> <b>Просмотреть.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-view.svg' ?>" width="16px" height="16px"/> <b>View.</b> Opens a window to view the file;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-permissions.svg' ?>" width="32px" height="32px"/> <b>Permissions.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-permissions.svg' ?>" width="16px" height="16px"/> <b>Permissions.</b> Opens a window for setting access to a file or folder;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-attributes.svg' ?>" width="32px" height="32px"/> <b>Information.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-grid.svg' ?>" width="16px" height="16px"/> 
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-list.svg' ?>" width="16px" height="16px"/> <b>Grid / List.</b> View files and folders as a list or grid (with columns).
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-grid.svg' ?>" width="32px" height="32px"/> 
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-list.svg' ?>" width="32px" height="32px"/> <b>Grid / List.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-attributes.svg' ?>" width="16px" height="16px"/> <b>Information.</b> View help information;
+        </li>
+        <li>
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-settings.svg' ?>" width="16px" height="16px"/> <b>Settings.</b> Opens the access settings window.
         </li>
     </ul>
 </article>

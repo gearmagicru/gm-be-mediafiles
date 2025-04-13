@@ -15,70 +15,72 @@
     <div class="g-help-screen g-help-screen--hidable">
         <img src="<?= $assetsUrl, '/help/filepanel.png' ?>" />
     </div>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+    <p>Панель файлов состоит из списка файлов и панели инструментов для совершения операций над этими файлами.</p>
     <h2>Столбцы списка</h2>
     <ul class="g-help-list">
-        <li><b>Имя.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Полное имя.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Размер.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Тип.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-        voluptua;</li>
-        <li><b>MIME-тип.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Права доступа.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Последний доступ.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Последнее изменение.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><b>Имя.</b> Имя файла или папки;</li>
+        <li><b>Полное имя.</b> Полное имя файла или папки включает локальный путь относительно текущей папки;</li>
+        <li><b>Размер.</b> Размер файла в гигабайтах, мегабайтах, килобайтах и байтах</li>
+        <li><b>Тип.</b> Тип элемента: папка с файлами или файл;</li>
+        <li><b>MIME-тип.</b> MIME-тип — это стандарт для указания формата данных, отправляемых и получаемых в электронной почте, веб-браузерах и других интернет-приложениях. Каждый MIME-тип состоит из двух частей: основного типа и подтипа;</li>
+        <li><b>Права доступа.</b> Запись прав доступа буквенная и цифровая;</li>
+        <li><b>Последний доступ.</b> Дата и время последнего доступа к файлу или папке;</li>
+        <li><b>Последнее изменение.</b> Дата и время последнего изменения файла или папки.</li>
     </ul>
 
     <h2>Панель инструментов</h2>
     <ul class="g-help-list">
     <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-home.svg' ?>" width="32px" height="32px"/> <b>Корневая папка.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-home.svg' ?>" width="16px" height="16px"/> <b>Корневая папка.</b> Переходит в корневую папку;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-up.svg' ?>" width="32px" height="32px"/> <b>Перейти на уровень выше.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-up.svg' ?>" width="16px" height="16px"/> <b>Перейти на уровень выше.</b> Переходит в родительскую папку (папка на уровень выше);
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-delete.svg' ?>" width="32px" height="32px"/> <b>Удалить.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-delete.svg' ?>" width="16px" height="16px"/> <b>Удалить.</b> Удаляет выделенные элементы (файлы, папки) с подтверждением;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-refresh.svg' ?>" width="32px" height="32px"/> <b>Обновить.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-refresh.svg' ?>" width="16px" height="16px"/> <b>Обновить.</b> Обновляет список элементов (файлы, папки);
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-find.svg' ?>" width="32px" height="32px"/> <b>Поиск.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-find.svg' ?>" width="16px" height="16px"/> <b>Поиск.</b> Показывает панель с возможностью поиска файлов и папок;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-profile_on.svg' ?>" width="32px" height="32px"/> <b>Профилирование.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-profile_on.svg' ?>" width="16px" height="16px"/> <b>Профилирование.</b> Разворачивает или сворачивает Панель навигации для отображения информации о выбранном файле или папке;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-select.svg' ?>" width="32px" height="32px"/> <b>Выделить.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-select.svg' ?>" width="16px" height="16px"/> <b>Выделить.</b> Выделяет или сбрасывает выделение всех элементов (файлы, папки) в списке;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-upload.svg' ?>" width="32px" height="32px"/> <b>Загрузить.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-upload.svg' ?>" width="16px" height="16px"/> <b>Загрузить.</b> Открывает окно для загрузки файла;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-download.svg' ?>" width="32px" height="32px"/> <b>Скачать.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-download.svg' ?>" width="16px" height="16px"/> <b>Скачать.</b> Выполняет скачивание выбранных элементов (файлы, папки). Если элементов несколько, то они будут упакованы в архив и скачаны;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-compress.svg' ?>" width="32px" height="32px"/> <b>Архивировать.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-compress.svg' ?>" width="16px" height="16px"/> <b>Архивировать.</b> Выполняет архивацию и скачивание выбранных элементов (файлы, папки);
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-extract.svg' ?>" width="32px" height="32px"/> <b>Разархивировать.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-extract.svg' ?>" width="16px" height="16px"/> <b>Разархивировать.</b> Открывает окно для выполнения разархивации выбранного файла;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-rename.svg' ?>" width="32px" height="32px"/> <b>Переименовать.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-rename.svg' ?>" width="16px" height="16px"/> <b>Переименовать.</b> Открывает окно для переименования файла или папки;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-view.svg' ?>" width="32px" height="32px"/> <b>Просмотреть.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-view.svg' ?>" width="16px" height="16px"/> <b>Просмотреть.</b> Открывает окно для просмотра файла;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-permissions.svg' ?>" width="32px" height="32px"/> <b>Права доступа.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-permissions.svg' ?>" width="16px" height="16px"/> <b>Права доступа.</b> Открывает окно для настройки доступа к файлу или папке;
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-attributes.svg' ?>" width="32px" height="32px"/> <b>Информация.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-grid.svg' ?>" width="16px" height="16px"/> 
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-list.svg' ?>" width="16px" height="16px"/> <b>Сетка / Список.</b> Просмотр файлов и папок в виде списка или сетки (со столбцами).
         </li>
         <li>
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-grid.svg' ?>" width="32px" height="32px"/> 
-            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-list.svg' ?>" width="32px" height="32px"/> <b>Сетка / Список.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-attributes.svg' ?>" width="16px" height="16px"/> <b>Информация.</b> Просмотр справочной информации;
+        </li>
+        <li>
+            <img class="g-help-icon g-icon-svg g-icon-m_color_neutral-dark" src="<?= $assetsUrl, '/images/toolbar/icon-settings.svg' ?>" width="16px" height="16px"/> <b>Настройки.</b> Открывает окно настроек доступа.
         </li>
     </ul>
 </article>
